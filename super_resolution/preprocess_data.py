@@ -103,9 +103,9 @@ class DataProcessor(object):
 
 
 if __name__ == '__main__':
-    # utils.deleteGif('./images/origin')
+    utils.deleteGif('./images/origin')
     dataProcessor = DataProcessor()
-    # dataProcessor.cut_images('./images/origin', './images/cut')
+    dataProcessor.cut_images('./images/origin', './images/cut')
     dataProcessor.reduce_size('./images/cut', './images/lowResolution', 1/5)
     dataProcessor.restore_size('./images/lowResolution', './images/interpolation','./images/cut')
-    # dataProcessor.saveToH5File('./images/cut', 50, './dataset.h5')
+    dataProcessor.saveToH5File('./images/cut', 50, './dataset.h5')

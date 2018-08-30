@@ -177,13 +177,7 @@ if __name__ == '__main__':
         model = SRCNN(sess, './dataset.h5', epoch, batch_size, 1/3)
         # model.train()
         model.load_model()
-        # new_image = model.predict('./images/interpolation/1.jpg')
-        # cv2.imwrite('./images/output/1.jpg', new_image)
-        # new_image = model.predict('./images/interpolation/2.png')
-        # cv2.imwrite('./images/output/2.png', new_image)
-        # new_image = model.predict('./images/interpolation/5.jpg')
-        # cv2.imwrite('./images/output/5.jpg', new_image)
-
-        new_image = model.predict('./images/interpolation/63.jpg')
-        cv2.imwrite('./images/output/63.jpg', new_image)
+  
+        new_image = model.predict('./images/input/input.jpg')
+        cv2.imwrite('./images/output/result.jpg', new_image)
 
